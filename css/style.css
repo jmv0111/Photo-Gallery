@@ -1,0 +1,120 @@
+body {
+  background-color: #eeeeee;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+}
+
+p a {
+  font-size: 16px;
+}
+
+img {
+  width: 100% !important;
+  object-fit: cover;
+}
+
+p {
+  text-align: center;
+}
+
+div img {
+  width: 20rem;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  padding: 2px;
+}
+
+div figure {
+  overflow: hidden;
+  border: 1px solid rgb(83, 67, 37);
+  border-radius: 10px;
+}
+
+div figure figcaption {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+div figure:last-of-type img {
+  object-position: 0 -3.5rem;
+}
+
+@media screen and (min-width: 772px) {
+  div {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div figure {
+    border-radius: 10rem;
+  }
+
+  div figure:last-of-type {
+    grid-column: 1 / span 2;
+  }
+
+  div img {
+    width: 10rem;
+    height: 15rem;
+  }
+
+  div figure:last-of-type img {
+    object-position: 0 -8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  div {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  div figure {
+    border-radius: 0;
+  }
+
+  div figure:last-of-type {
+    grid-column: 1 / span 3;
+  }
+
+  div figure:last-of-type img {
+    object-position: 0 -20rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    overflow-y: hidden;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  div figure {
+    background-color: #181b30;
+    color: navajowhite;
+    border: 1px solid black;
+  }
+}
